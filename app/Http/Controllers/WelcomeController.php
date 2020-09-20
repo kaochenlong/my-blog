@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class WelcomeController extends Controller
 {
     public function about() {
-        $name = "悟空";
-        return view("pages.about", ['name' => $name]);
+        $heroes = ["悟空", "達爾", "鳴人", "佐助", "魯夫"];
+        return view("pages.about", ['heroes' => $heroes]);
     }
 }
