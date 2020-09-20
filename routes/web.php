@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/about", 'WelcomeController@about');
+//Route::get("/about", 'WelcomeController@about');
+Route::get("/about", [\App\Http\Controllers\WelcomeController::class, 'about']);
