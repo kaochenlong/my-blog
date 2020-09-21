@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 //Route::get("/about", 'WelcomeController@about');
 Route::get("/about", [\App\Http\Controllers\WelcomeController::class, 'about']);
+
+Route::resource('posts', \App\Http\Controllers\PostsController::class)->only(['index', 'show']);
